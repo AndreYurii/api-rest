@@ -1,7 +1,7 @@
-package com.produtos.apirestpetz.service;
+package com.produtos.apirest.service;
 
-import com.produtos.apirestpetz.dto.ClienteDTO;
-import com.produtos.apirestpetz.model.Cliente;
+import com.produtos.apirest.dto.ClienteDTO;
+import com.produtos.apirest.model.Cliente;
 
 import java.util.List;
 
@@ -11,6 +11,6 @@ public interface ClienteService  {
     Cliente buscarPorId(long id);
     Cliente salvar(ClienteDTO cliente) throws Exception;
     Cliente deletar(long id);
-    Cliente atualizar(Cliente clienteDTO);
+    Cliente atualizar(ClienteDTO clienteDTO, long id) throws Exception;
     Cliente buscaPorEmail(String email) throws Exception;
 }

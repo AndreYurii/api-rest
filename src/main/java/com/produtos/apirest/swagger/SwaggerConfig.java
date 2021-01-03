@@ -1,4 +1,4 @@
-package com.produtos.apirestpetz.swagger;
+package com.produtos.apirest.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SwaggerConfig {
     public Docket productApi(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.produtos.apirestpetz.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.produtos.apirest.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(metaInfo());
@@ -29,7 +29,7 @@ public class SwaggerConfig {
 
     private ApiInfo metaInfo(){
         ApiInfo apiInfo = new ApiInfo(
-                "PETZ-API",
+                "SOFTPLAN-API",
                 "Backend API.",
                 "0.0.1-SNAPSHOT",
                 "Terms of Service",
