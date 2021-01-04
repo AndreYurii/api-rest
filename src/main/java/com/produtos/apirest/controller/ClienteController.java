@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/cliente")
-@Api(value = "API REST Cliente")
+@Api(value = "API REST cliente.ts")
 @CrossOrigin(origins = "*")
 public class ClienteController {
 

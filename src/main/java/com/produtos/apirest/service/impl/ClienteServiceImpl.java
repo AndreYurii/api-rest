@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -66,8 +67,9 @@ public class ClienteServiceImpl implements ClienteService {
             cliente.setDataDaAtualizacaoCadastral(LocalDate.now());
 
             return repository.save(cliente);
-        } else throw new Exception("Cliente não existente");
+        } else throw new Exception("cliente.ts não existente");
     }
+
 
     @Override
     public Cliente buscaPorEmail(String email) throws Exception {
@@ -91,5 +93,6 @@ public class ClienteServiceImpl implements ClienteService {
             throw new Exception("Email já cadastrado");
         }
     }
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 }
