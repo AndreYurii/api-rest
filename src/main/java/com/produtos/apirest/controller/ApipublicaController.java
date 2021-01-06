@@ -14,7 +14,6 @@ public class ApipublicaController {
 
     @GetMapping()
     public String meuServicoPublico() {
-        String testando = "deu certo";
-        return testando;
+        return "https://github.com/AndreYurii/api-rest";
     }
 }
