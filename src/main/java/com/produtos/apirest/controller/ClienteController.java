@@ -15,12 +15,17 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/cliente")
-@Api(value = "API REST cliente.ts")
+@Api(value = "API REST cliente")
 @CrossOrigin(origins = "*")
 public class ClienteController {
 
     @Autowired
     ClienteService service;
+
+    @GetMapping("/login")
+    public String login() {
+        return "Autenticação OK";
+    }
 
     @GetMapping()
     public ResponseEntity<List<Cliente>> buscarTodos() {

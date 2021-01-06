@@ -67,7 +67,7 @@ public class ClienteServiceImpl implements ClienteService {
             cliente.setDataDaAtualizacaoCadastral(LocalDate.now());
 
             return repository.save(cliente);
-        } else throw new Exception("cliente.ts não existente");
+        } else throw new Exception("cliente não existente");
     }
 
 

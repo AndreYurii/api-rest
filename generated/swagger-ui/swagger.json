@@ -2,12 +2,12 @@
   "swagger" : "2.0",
   "info" : {
     "version" : "0.0.1-SNAPSHOT",
-    "title" : "PETZ API"
+    "title" : "API REST"
   },
   "basePath" : "/api",
   "tags" : [ {
-    "name" : "API REST Cliente"
+    "name" : "API REST cliente"
   }, {
-    "name" : "API REST Pet"
+    "name" : "API REST"
   } ]
 }
