@@ -11,7 +11,8 @@ VALUE: Aplication/Json
 
 Na aba `Authorization -> Basic Auth` os seguintes parametros!
 
-  Username: andreyuri
+  Username: andreyuri 
+### ###
   Password: 123
 
 ## URL´s das API´s
