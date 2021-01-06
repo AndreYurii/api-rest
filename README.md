@@ -42,3 +42,21 @@ retorna um HTTPSTATUS 201.
 url utilizada para buscar os dados de uma entidade utilizando como parametro o Identificador da Entidade.
 retorna um HTTPSTATUS 200.
 
+### ###
+
+# Documentação Front-end
+
+## Teste
+
+## Exemplo de dados válidos para cadastrar um cliente
+
+{
+  "cpf": "Utilizar um CPF válido",
+  "dataDeNascimento": "dd/MM/yyyy",
+  "email": "teste@email.com",
+  "nacionalidade": "brasileira",
+  "naturalidade": "salvador",
+  "nome": "andre yuri",
+  "sexo": "Masculino"
+}
+
