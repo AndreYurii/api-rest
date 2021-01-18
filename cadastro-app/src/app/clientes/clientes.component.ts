@@ -11,7 +11,7 @@ export class ClientesComponent implements OnInit {
 
   private isLoadingResults: boolean;
 
-  displayedColumns: string[] = [ 'nome', 'email', 'sexo', 'dataDeNascimento', 'naturalidade', 'nacionalidade', 'cpf', 'acao' ];
+  displayedColumns: string[] = [ 'nome', 'email', 'sexo', 'dataDeNascimento', 'cpf', 'naturalidade', 'nacionalidade', 'acao' ];
   dataSource: Cliente[];
 
   constructor(private _api: ApiService) { }

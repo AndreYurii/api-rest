@@ -6,13 +6,22 @@
     <input matInput name="nome" placeholder="Nome" formControlName="nome">
   </mat-form-field>
   <mat-form-field>
-    <textarea  matInput name="email" placeholder="Email" formControlName="email"></textarea>
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+           placeholder="Ex. cliente@exemplo.com">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Por favor insira um endereço de email válido
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email é <strong>obrigatório</strong>
+    </mat-error>
   </mat-form-field>
+
   <mat-form-field>
     <input matInput name="sexo" placeholder="Sexo" formControlName="sexo">
   </mat-form-field>
   <mat-form-field>
-    <input matInput name="dataDeNascimento" placeholder="Data de Nascimento" formControlName="dataDeNascimento">
+    <input  type="date" matInput name="dataDeNascimento" placeholder="Data de Nascimento" formControlName="dataDeNascimento">
   </mat-form-field>
   <mat-form-field>
     <input matInput name="naturalidade" placeholder="Naturalidade" formControlName="naturalidade">
@@ -20,9 +29,34 @@
   <mat-form-field>
     <input matInput name="nacionalidade" placeholder="Nacionalidade" formControlName="nacionalidade">
   </mat-form-field>
+
   <mat-form-field>
-    <input matInput name="cpf" placeholder="CPF" formControlName="cpf">
+    <mat-label>CPF</mat-label>
+    <input type="tel" matInput [formControl]="cpfFormControl" [errorStateMatcher]="matcher"
+           placeholder="Ex. 000.000.000-00">
+    <mat-error *ngIf="cpfFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Por favor insira um CPF válido
+    </mat-error>
+    <mat-error *ngIf="cpfFormControl.hasError('required')">
+      CPF é <strong>obrigatório</strong>
+    </mat-error>
   </mat-form-field>
 
   <button type="submit" [disabled]="!productForm.valid" mat-button color="primary" >Adicionar</button>
 </form>
+
+<!--
+   <mat-label>CPF</mat-label>
+    <input matInput name="cpf" placeholder="Ex. 000.000.000-00" formControlName="cpf">
+    <mat-error *ngIf="cpfFormControl.pristine && cpfFormControl.errors">
+      <p *ngIf="cpfFormControl.hasError('required')">
+        CPF é <strong>obrigatório</strong>
+      </p>
+      <p *ngIf="cpfFormControl.errors.cpfInvalido">
+        Digite um CPF válido
+      </p>
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('cpf') && !emailFormControl.hasError('required')">
+      Por favor insira um CPF válido
+    </mat-error>
+-->

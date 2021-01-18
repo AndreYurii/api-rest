@@ -8,6 +8,7 @@ import { ApiService } from 'src/app/api.service';
   templateUrl: './cliente-editar.component.html',
   styleUrls: ['./cliente-editar.component.scss']
 })
+
 export class ClienteEditarComponent implements OnInit {
 
   _id: String = '';
@@ -30,7 +31,6 @@ export class ClienteEditarComponent implements OnInit {
       'cpf' : [null]
     });
   }
-
   getCliente(id) {
     this.api.getCliente(id).subscribe(data => {
       this._id = data.id;

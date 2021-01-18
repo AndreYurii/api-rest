@@ -4,7 +4,7 @@
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
   <div class="button-row">
-    <button mat-flat-button color="accent" [routerLink]="['/clientes']"><mat-icon>list</mat-icon> Voltar</button>
+    <button mat-flat-button color="primary" [routerLink]="['/clientes']"><mat-icon>list</mat-icon> Voltar</button>
   </div>
   <mat-card class="example-card">
     <mat-card-header>
@@ -31,7 +31,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-flat-button color="primary" class="teste" [routerLink]="['/cliente-editar', cliente.id]"><mat-icon>edit</mat-icon> Editar</button>
-      <button mat-flat-button color="warn" (click)="deleteCliente(cliente.id)"><mat-icon>delete</mat-icon> Excluir</button>
+      <button mat-flat-button color="primary" (click)="deleteCliente(cliente.id)"><mat-icon>delete</mat-icon> Excluir</button>
     </mat-card-actions>
   </mat-card>
 </div>

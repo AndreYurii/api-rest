@@ -32,7 +32,7 @@ import {CdkTableModule} from "@angular/cdk/table";
     ClienteDetalheComponent,
     ClienteNovoComponent,
     ClienteEditarComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
